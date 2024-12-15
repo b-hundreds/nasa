@@ -1,16 +1,22 @@
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+import json
+import os
+from google.oauth2.service_account import Credentials
 from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-# Cấu hình kết nối với Google Sheets
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("../elegant-racer-444806-d0-728c021a5920.json", scope)
+# Lấy thông tin xác thực từ biến môi trường
+json_creds = os.getenv("GOOGLE_SHEET_CREDENTIALS")
+creds_dict = json.loads(json_creds)
+
+# Tạo credentials từ biến môi trường
+scope = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
+creds = Credentials.from_service_account_info(creds_dict, scopes=scope)
 client = gspread.authorize(creds)
 
 # Mở Google Sheet
-sheet = client.open("nasa_infor").sheet1  # Tên Google Sheet và sheet1 là trang đầu tiên
+sheet = client.open("nasa_infor").sheet1
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
