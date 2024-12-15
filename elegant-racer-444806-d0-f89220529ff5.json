@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "elegant-racer-444806-d0",
+  "private_key_id": "f89220529ff5acc8ccc90df7982c60a48d1f91c1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDuqedg1TBEvxVP\njPyz2CcdL8TGAP0vhZy3Drs6L9Xc74Re9z2wx5BEA2G23kufphMiAkZfT+zx0Eyf\naOjqqx7+rjKJc/WpoIAtFoxK9vdmmy7kGGT7QVj2r1ywIv/eS1Bzch26JmDGs+pF\nXoIQeiw8kqKOnRZJJnwmpcXbvn1X+Y4NB2/345URbRAdDyicPUhLFNLg5AOx980f\nxx9uYjtXxUw4PZOyBQcXOIKufcxF1YFRfchxj7KtMPc3ICSCe9IfPu0JZfZ8MI0a\nkXigTLiwhl2CbjavsGzUzGWI2EmkLdjzjLnCWtml6n4Et0ejb4vR4CbBHJ+Z1I5Y\nhhFWL3EpAgMBAAECggEABvxlhRnDF5q5m/eA2h7PSPUXVG2+UNV0uI2vgKIv0g9s\nwimIiRPTruSjx+o1L895AJDX0H29biKZFj1y5pOVt6y6VqL/TjTK1lxc75YlDcAo\ncjgd6euIGB3FSnPr0MJG8Oomi/FdpH4AXdbIsITIULRAxTM8mMLjSsT6yADebbnA\n1yv+QxZU5TbY4lHyNbKNZmdDs0WiI5xsdLfL5L+k3TA60/A20R8RUMhQ1QdgphIW\n978uBOrCpEx3BiD84DkVzBsxT7PQbEHcz6f8bOsbWJE51LlqLjxSs2KsOjDwphL1\nRDfZgxvDzIhqgCnMmHrDzC0sMQTB1hXgXK1f9v2hdQKBgQD4fVlFMFhjK74PSRA9\nGN+82CXBx6ust++SWDWgHZ2emhTivN2PTR+FUUlyogpLaWoo/93VOnYviYAbtnfC\nPLfQGvs54H2/i8rmyDmeDYiG52CHUcf30SZ1+uhKXMmxuFuCa7Zpul3hXfGA6xxi\na7xJApm2hVOoTszNamHRqVzKPwKBgQD14Ic7I3SZjxChY75ChmwIfyq/zQVDSFYQ\n5vCQorkZLrVCLlMmVZwYlzs5gV6Bg09njcprCigd+iEiVE57pOuM9MkjRWdrYALu\nwoMUl4tD7w9dM+iJvIf4lJTBbGbTIFHTU5k6mJDMpeRjd5or3SxwuVlWzuW4rpPF\nZMS/NCZalwKBgDF+1k8/x/tI9TyaMw/Yaoh1DWBB42It6RxfUZ8pBwJWcp6PPBqV\nJBgsDtM0j5Rh1PGBtbAJSw1A+DGM8OHRslNTbIMkwidrMukxLLjcvTsRz1pk4c3s\n7RpG9goJ3Wr269NYnScGJjkDu10Qd8Dq8MAiMnf2qqk1uPmZnQ5kC8WFAoGBAM0v\nkUq93Nkk9cjo9uaHTPKORPuIuWKbpA842fqpgPRN8T+IbyVnfftbgTYNCvPjw8j0\nH77R3AagLTR7zH8McvHPeWbwzUxi9C+RrVfq23JWtqid3+nJpmLAg58iunBn4UEM\n26t1lCjkK8MCFWuTiDmNw8tYn4ZOUc0BudqiR3uDAoGBAN6NZj1nj7SRilhI9x0u\n8HME5enO7zgBgwmApO0yHK2vUO1W4k8JQM0mPIJMiQ7fBRM1hWDiSuT8pKslv+sC\nILUFNoZqQ5bJL9/vTIR349n+rEx9Al0oZF+jeqPTNi/+bzyLTjEv9jG1r6laJ0b+\nPTrFNxl/fZUAZMSbf7M61QCJ\n-----END PRIVATE KEY-----\n",
+  "client_email": "flask-app-service@elegant-racer-444806-d0.iam.gserviceaccount.com",
+  "client_id": "109485409269938189552",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/flask-app-service%40elegant-racer-444806-d0.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
