@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Cấu hình kết nối với Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("elegant-racer-444806-d0-127792880f9e.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("elegant-racer-444806-d0-728c021a5920.json", scope)
 client = gspread.authorize(creds)
 
 # Mở Google Sheet
