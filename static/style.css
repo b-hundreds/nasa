@@ -120,3 +120,9 @@ p span {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
+
+#message-box.hiding {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease; /* Thời gian chuyển tiếp ngắn hơn */
+}
