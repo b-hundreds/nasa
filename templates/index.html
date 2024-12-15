@@ -60,18 +60,23 @@
 
             function displayMessage(message, type) {
                 messageBox.textContent = message;
-
+            
                 // Loại bỏ các lớp trước đó và thêm lớp tương ứng
                 messageBox.classList.remove('hidden', 'success', 'error');
                 messageBox.classList.add(type);
-
+            
                 // Hiển thị thông báo
-                // (Giữ lớp 'hidden' để ẩn thông báo sau thời gian nhất định)
-                // Đảm bảo rằng lớp 'hidden' chỉ được thêm sau khi thông báo đã được hiển thị
                 setTimeout(() => {
-                    messageBox.classList.remove(type);
+                    // Chuyển sang trạng thái "hiding" để giữ màu khi ẩn
+                    messageBox.classList.add('hiding');
                     messageBox.classList.add('hidden');
-                }, 3000); // 5000ms = 5 giây
+                    messageBox.classList.remove(type);
+                }, 3000); // Thời gian hiện thông báo
+            
+                // Loại bỏ trạng thái "hiding" sau khi box đã hoàn toàn ẩn
+                setTimeout(() => {
+                    messageBox.classList.remove('hiding');
+                }, 4000); // Thời gian ẩn hoàn toàn
             }
         });
     </script>
