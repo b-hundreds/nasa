@@ -1,0 +1,122 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #d4f1f9, #ffffff);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #004b87;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Highlight the text "TÀI LIỆU NGAY" */
+h1 .highlight {
+    color: #ff4500;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input {
+    color: #333;
+}
+
+form button {
+    background: #004b87;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background: #0075c4;
+    transform: scale(1.05);
+}
+
+p {
+    font-size: 14px;
+    color: #444;
+    margin-top: 20px;
+}
+
+p span {
+    color: #ff4500;
+    font-weight: bold;
+}
+
+/* Message box for dynamic feedback */
+#message-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 2s ease, transform 2s ease; /* Thời gian chuyển tiếp 3s */
+    z-index: 1000; /* Đảm bảo thông báo nằm trên cùng */
+}
+
+#message-box.hidden {
+    background-color: #0f9ddff1;
+    color: white;
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 0;
+}
+
+#message-box.success {
+    background-color: #0f9ddff1; /* Màu xanh lá cho thành công */
+    color: white;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+#message-box.error {
+    background-color: #f44336; /* Màu đỏ cho lỗi */
+    color: white;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}

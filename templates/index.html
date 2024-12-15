@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA English - Nhận Tài Liệu Miễn Phí</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="static/logo1.jpg" alt="NASA English Logo">
+        </div>
+        <h1>
+            NHẬN NGAY <span class="highlight">TÀI LIỆU MIỄN PHÍ</span> <br> TỪ NASA ENGLISH TẠI ĐÂY
+        </h1>
+        <form id="user-form">
+            <input type="text" name="name" placeholder="Họ và tên" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="phone" placeholder="Số điện thoại" required>
+            <button type="submit">NHẬN TÀI LIỆU NGAY</button>
+        </form>
+        <p>Để NASA English đồng hành hỗ trợ nhà trường, trung tâm tuyển được nhiều học viên hơn mỗi tháng!</p>
+    </div>
+
+    <div id="message-box" class="hidden"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('#user-form');
+            const messageBox = document.querySelector('#message-box');
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault(); // Ngăn form gửi thông thường
+
+                const data = {
+                    name: form.name.value,
+                    email: form.email.value,
+                    phone: form.phone.value,
+                };
+
+                try {
+                    const response = await fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data),
+                    });
+
+                    if (response.ok) {
+                        displayMessage("Thông tin đã được gửi thành công!", "success");
+                        form.reset(); // Xóa nội dung form
+                    } else {
+                        displayMessage("Đã có lỗi xảy ra. Vui lòng thử lại!", "error");
+                    }
+                } catch (error) {
+                    displayMessage("Lỗi kết nối. Vui lòng thử lại sau!", "error");
+                }
+            });
+
+            function displayMessage(message, type) {
+                messageBox.textContent = message;
+
+                // Loại bỏ các lớp trước đó và thêm lớp tương ứng
+                messageBox.classList.remove('hidden', 'success', 'error');
+                messageBox.classList.add(type);
+
+                // Hiển thị thông báo
+                // (Giữ lớp 'hidden' để ẩn thông báo sau thời gian nhất định)
+                // Đảm bảo rằng lớp 'hidden' chỉ được thêm sau khi thông báo đã được hiển thị
+                setTimeout(() => {
+                    messageBox.classList.remove(type);
+                    messageBox.classList.add('hidden');
+                }, 3000); // 5000ms = 5 giây
+            }
+        });
+    </script>
+</body>
+</html>
